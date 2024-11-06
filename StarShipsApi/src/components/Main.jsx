@@ -13,7 +13,10 @@ const Main = () => {
     <div>
       <Routes>
         <Route path='/' element={<h2>Home Page </h2>} />
-        <Route path='/starshipslist' element={<StarshipList starships={starships} setStarships={setStarships} />} />
+        <Route path='/starshipslist' element={<StarshipList 
+        starships={starships} 
+        setStarships={setStarships} 
+        />} />
         <Route path='/starshipslist/:starshipId' element={<StarshipsPage starships={starships} />} />
         <Route path='/films' element={<Films />} />
         <Route path='/planets' element={<Planets />} />

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
+import Button from "./Button"
 
 const FilmsList = (props) => {
 const [films, setFilms] = useState([])
@@ -14,10 +15,15 @@ const [films, setFilms] = useState([])
         getFilms()
     }, [])
 
+const filmOnClick = () => {
+    console.log('film was clicked')
+}
     return (
         <div>
             <h2>Film List</h2>
-        
+        <Button
+        title="Film"
+        onClick={filmOnClick}></Button>
            <ul>
             {
 films.map((film) => (
